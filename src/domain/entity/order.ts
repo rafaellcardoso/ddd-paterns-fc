@@ -50,4 +50,7 @@ export default class Order {
         return this._items.reduce((acc, item) => acc + item.orderItemTotal(), 0);
     }
 
+    calculateTotalDiscount(percentage: number){
+        this._total = (this._total * percentage) / 100;
+    }
 }
